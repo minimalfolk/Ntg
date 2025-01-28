@@ -7,7 +7,33 @@
   <meta name="keywords" content="Memojar, save memories, share memories, personal vault, offline storage">
   <meta name="author" content="Memojar">
   <title>About Memojar</title>
-  <link rel="stylesheet" href="styles.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <style>
+    /* Include the provided CSS here */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Caveat', sans-serif; background-color: #f4f4f4; color: #333; margin: 0; line-height: 1.6;}
+    header {background-color: #007BFF; color: white; padding: 20px; text-align: center;}
+    header .logo {font-size: 32px; font-family: 'Permanent Marker', sans-serif; margin-bottom: 10px;}
+    .navbar ul {list-style: none; display: flex; justify-content: center; padding: 0;}
+    .navbar ul li {margin: 0 15px;}
+    .navbar ul li a {color: white; text-decoration: none; font-size: 18px; transition: color .3s;}
+    .navbar ul li a:hover {color: #f4f4f4;}
+    main {margin-top: 20px; padding: 20px; text-align: center;}
+    main h1 {font-family: 'Permanent Marker', sans-serif; font-size: 38px; margin-bottom: 20px; color: #333;}
+    .description {font-size: 35px; font-family: 'Caveat', sans-serif; margin-bottom: 30px; color: #555;}
+    iframe {width: 100%; max-width: 640px; height: 1000px; border: none;}
+    footer {background-color: #007BFF; color: white; padding: 20px; text-align: center;}
+    footer .footer-logo {font-size: 32px; font-family: 'Permanent Marker', sans-serif; margin-bottom: 10px;}
+    footer .footer-links {margin-bottom: 10px;}
+    footer .footer-links a {color: white; text-decoration: none; margin: 0 10px;}
+    footer .footer-links a:hover {text-decoration: underline;}
+    footer .social-links a {color: white; text-decoration: none; margin: 0 10px;}
+    footer p {font-family: 'Permanent Marker', sans-serif; font-size: 16px; margin-top: 20px;}
+    @media (max-width: 768px) {
+      .navbar ul {flex-direction: column; align-items: center;}
+      iframe {height: 800px;}
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -16,8 +42,8 @@
     <nav class="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
       </ul>
     </nav>
   </header>
@@ -68,7 +94,7 @@
     <nav>
       <a href="index.html">Home</a> | 
       <a href="about.html">About</a> | 
-      <a href="#feedback">Feedback</a>
+      <a href="feedback.html">Feedback</a>
     </nav>
     <div class="social-links">
       <a href="https://www.facebook.com/profile.php?id=61572224594758" target="_blank" rel="noopener">Facebook</a>
