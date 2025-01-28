@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Memojar allows you to store and share your memories securely, both offline and online. Join our waiting list for exclusive access to our memory storage app.">
+    <meta name="keywords" content="store memories, share memories, offline memory storage, online memory sharing, secure memory storage, memory app">
     <meta property="og:title" content="Memojar - Store and Share Your Memories Securely">
     <meta property="og:description" content="Memojar helps you store and share memories securely, both offline and online. Join the waiting list for exclusive access.">
     <meta property="og:image" content="image_url.jpg">
@@ -14,11 +15,14 @@
     <meta name="twitter:image" content="image_url.jpg">
     <title>Memojar - Store and Share Your Memories Securely</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
 
-    <!-- External CSS (minified) -->
+    <!-- Minified CSS for fast loading -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 <body>
@@ -31,24 +35,24 @@
         <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">&#9776;</div>
         <div class="navigation-links" id="nav-links" aria-label="Main Navigation">
             <div class="close-btn" onclick="closeMenu()">&times;</div>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="mailto:feedback.memojar@gmail.com">Feedback</a>
+            <a href="#home" aria-label="Home">Home</a>
+            <a href="#about" aria-label="About">About</a>
+            <a href="#contact" aria-label="Contact">Contact</a>
+            <a href="mailto:feedback.memojar@gmail.com" aria-label="Feedback">Feedback</a>
         </div>
     </nav>
 </header>
 
 <main>
-    <h1>Store and Share Your Memories Securely, Both Offline and Online</h1>
+    <h1>Store and Share Your Memories with Friends, Even Offline</h1>
 
-    <p>Memojar is your ultimate app for securely storing and sharing memories. Whether it's a photo, video, or personal note, Memojar ensures that your memories are saved both offline and online, keeping them safe and accessible.</p>
+    <p>A platform where you can store all your memories happening with you offline, and share it with your friends online.</p>
 
     <div class="line"></div>
 
     <a href="mailto:feedback.memojar@gmail.com" class="waiting-room-btn" role="button" aria-label="Join the waiting room">Join the Waiting Room</a>
 
-    <!-- Memory Animation -->
+    <!-- Memory Animation (Lazy-loaded) -->
     <img src="memory-animation.webp" alt="Memory being stored securely in Memojar app" loading="lazy" width="100%" height="auto">
 </main>
 
@@ -69,8 +73,8 @@
     <p>@2025 Memojar</p>
 </footer>
 
-<!-- External JS -->
-<script src="script.js"></script>
+<!-- Minified JS -->
+<script src="script.js" defer></script>
 
 </body>
-        </html>
+</html>
