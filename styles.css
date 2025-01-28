@@ -1,4 +1,3 @@
-/* Minified CSS */
 /* Reset and base styles */
 * {
     margin: 0;
@@ -81,7 +80,7 @@ footer {
     padding: 20px;
     text-align: center;
     font-family: 'Permanent Marker', cursive;
-    font-size: 16px; /* Smaller text size for footer */
+    font-size: 14px; /* Smaller text size for footer */
 }
 
 footer a {
