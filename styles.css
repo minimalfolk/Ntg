@@ -1,146 +1,20 @@
-/* Minified CSS */
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+// Toggle hamburger menu
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('open');
 }
 
-body {
-    font-family: 'Caveat', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+// Close the menu when the close button or outside of the menu is clicked
+function closeMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.remove('open');
 }
 
-/* Header */
-header {
-    background-color: #007BFF;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 30px;
-    color: white;
-}
-
-h1 {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 38px;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-    color: #333;
-}
-
-p {
-    font-family: 'Caveat', sans-serif;
-    font-size: 35px;
-    text-align: center;
-    margin: 20px 0;
-    color: #333;
-}
-
-.line {
-    width: 100%;
-    height: 1px;
-    background-color: #000;
-    margin: 20px 0;
-}
-
-.waiting-room-btn {
-    display: block;
-    width: 250px;
-    padding: 15px;
-    background-color: #FF7F50;
-    text-align: center;
-    color: white;
-    border: none;
-    font-size: 1.2em;
-    margin: 20px auto;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.waiting-room-btn:hover {
-    background-color: #FF6347;
-}
-
-footer {
-    background-color: #007BFF;
-    padding: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer .social-icons a {
-    font-size: 1.5em;
-}
-
-footer .logo-footer img {
-    width: 80px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        color: white;
+// Close the menu if the user clicks outside of the navigation
+document.addEventListener('click', function (event) {
+    const navLinks = document.getElementById('nav-links');
+    const hamburger = document.querySelector('.hamburger');
+    if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+        navLinks.classList.remove('open');
     }
-
-    .navigation-links {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 100%;
-        background-color: #007BFF;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 999;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .navigation-links.open {
-        display: flex;
-        transform: translateX(0);
-    }
-
-    .navigation-links a {
-        color: white;
-        text-decoration: none;
-        padding: 15px;
-        font-size: 1.5em;
-        transition: background-color 0.3s ease;
-    }
-
-    .navigation-links a:hover {
-        background-color: #0056b3;
-    }
-
-    .close-btn {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-    }
-}
+});
