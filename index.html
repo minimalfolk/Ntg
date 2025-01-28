@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Memojar is a new way to digitally store and share your memories. Coming soon! Sign up now to stay updated.">
+    <meta name="keywords" content="memories, digital memories, social media, store memories, share memories, pre-launch">
+    <meta name="author" content="Memojar Team">
+    <meta property="og:title" content="Memojar - Store Your Memories">
+    <meta property="og:description" content="Memojar is a new way to store and share memories. Coming soon!">
+    <meta property="og:image" content="your-image-url.jpg">
+    <meta property="og:url" content="https://memojar.in">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Memojar - Store Your Memories">
+    <meta name="twitter:description" content="Memojar is a new way to digitally store and share your memories. Coming soon!">
+    <meta name="twitter:image" content="your-image-url.jpg">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <title>Memojar - Coming Soon</title>
+
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4; /* Light Gray Background */
+            color: #fff;
+            line-height: 1.6;
+            padding-top: 100px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Header */
+        header {
+            background-color: #0538A9;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: height 0.3s ease;
+        }
+
+        header.fullscreen {
+            height: auto;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 30px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .menu-toggle {
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+        }
+
+        nav {
+            display: none;
+        }
+
+        nav.active {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            background-color: #0538A9;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            padding: 20px;
+            width: 250px;
+            border-radius: 8px;
+            z-index: 9999;
+            transition: max-height 0.3s ease;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6584;
+        }
+
+        /* Main Content */
+        main {
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeUp 1.2s ease-in-out;
+        }
+
+        main h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5rem;
+            color: #0538A9;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .google-form-btn {
+            padding: 15px 20px;
+            background-color: #0538A9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .google-form-btn:hover {
+            background-color: #ff6584;
+            transform: scale(1.05);
+        }
+
+        .signup-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .signup-form input[type="email"] {
+            padding: 15px;
+            font-size: 1.1rem;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        .signup-form button {
+            padding: 15px 20px;
+            background-color: #f8a5c2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .signup-form button:hover {
+            background-color: #ff6584;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #0538A9;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #f8a5c2;
+        }
+
+        /* Accessibility Focus Styles */
+        input[type="email"]:focus,
+        button:focus {
+            outline: 3px solid #ff6584;
+            background-color: #ff6584;
+        }
+
+        /* Animation */
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            header.fullscreen {
+                padding: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://your-logo-url.com/logo.png" alt="Memojar Logo">
+        </div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <nav id="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Store Your Memory Digitally and Forever</h1>
+        <p>Memojar is a new way to digitally store and share your memories with friends and the world.</p>
+
+        <button class="google-form-btn" onclick="window.location.href='https://forms.gle/donSzjoqHwB3jDrX7'">Sign Up via Google Form</button>
+
+        <p>Be among the first to relive your most unforgettable moments in a whole new way. Coming soon!</p>
+
+        <div class="signup-form">
+            <input type="email" placeholder="Enter your email" required aria-label="Enter your email address">
+            <button aria-label="Sign Up for updates">Sign Up</button>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">Facebook</a>
+            <a href="https://instagram.com/memojar.in" target="_blank" aria-label="Instagram">Instagram</a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube">YouTube</a>
+        </div>
+    </footer>
+
+    <script>
+        // Main Menu Toggle for mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const header = document.querySelector('header');
+        const body = document.querySelector('body');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            header.classList.toggle('fullscreen');
+            body.classList.toggle('no-scroll'); // Disable scroll when menu is active
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!header.contains(event.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                header.classList.remove('fullscreen');
+                body.classList.remove('no-scroll');
+            }
+        });
+
+        // Prevent event propagation on the menu
+        navLinks.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+    </script>
+
+</body>
+
+</html>
