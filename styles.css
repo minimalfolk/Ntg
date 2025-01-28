@@ -1,11 +1,11 @@
-/* Basic Reset */
+/* Minified CSS */
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
 body {
     font-family: 'Caveat', sans-serif;
     background-color: #f4f4f4;
@@ -34,8 +34,17 @@ header nav {
 }
 
 h1 {
-    font-size: 3em;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 38px;
     font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+p {
+    font-family: 'Caveat', sans-serif;
+    font-size: 35px;
     text-align: center;
     margin: 20px 0;
     color: #333;
@@ -48,7 +57,6 @@ h1 {
     margin: 20px 0;
 }
 
-/* Button */
 .waiting-room-btn {
     display: block;
     width: 250px;
@@ -67,15 +75,14 @@ h1 {
     background-color: #FF6347;
 }
 
-/* Footer */
 footer {
-    background-color: #f4f4f4;
+    background-color: #007BFF;
     padding: 20px;
     text-align: center;
 }
 
 footer a {
-    color: #007BFF;
+    color: white;
     text-decoration: none;
     margin: 0 10px;
 }
@@ -101,7 +108,7 @@ footer .logo-footer img {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 50%;
         height: 100%;
         background-color: #007BFF;
         flex-direction: column;
@@ -113,7 +120,7 @@ footer .logo-footer img {
 
     .navigation-links.open {
         display: flex;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 
     .navigation-links a {
