@@ -1,175 +1,139 @@
-/* Reset styles */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #ececec;  /* Light gray background */
-    color: white;
-    padding: 0;
-    margin: 0;
-    line-height: 1.6;
+    font-family: 'Caveat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Header styles */
+/* Header */
 header {
-    background-color: #0538A9; /* Blue header */
-    color: white;
+    background-color: #007BFF;
     padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo img {
-    width: 150px;
-    alt: "Memojar Logo";
-}
-
-.menu-toggle {
-    font-size: 2.5rem;
-    color: white;
-    cursor: pointer;
+.hamburger {
     display: none;
-}
-
-/* Navigation links */
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #f8a5c2;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #ececec;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    font-family: 'Pacifico', cursive;
-    color: #0538A9;
-    font-weight: normal;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-/* Signup Form */
-.signup-form {
-    margin: 30px auto;
-    display: flex;
-    justify-content: center;
-}
-
-.signup-form input[type="email"] {
-    padding: 15px;
-    font-size: 1rem;
-    width: 300px;
-    border-radius: 5px;
-    border: none;
-}
-
-.signup-form button {
-    padding: 15px 30px;
-    font-size: 1rem;
-    margin-left: 10px;
-    background-color: #ff6584;
-    color: white;
-    border: none;
     cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: 20px 0;
+}
+
+/* Button */
+.waiting-room-btn {
+    display: block;
+    width: 250px;
+    padding: 15px;
+    background-color: #FF7F50;
+    text-align: center;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    margin: 20px auto;
+    text-decoration: none;
     border-radius: 5px;
 }
 
-.signup-form button:hover {
-    background-color: #f84f72;
-}
-
-/* Social Media Links */
-.social-media {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.social-media a {
-    color: #0538A9;
-    margin: 0 15px;
-    font-size: 1.2rem;
-    text-decoration: none;
-}
-
-.social-media a:hover {
-    color: #ff6584;
+.waiting-room-btn:hover {
+    background-color: #FF6347;
 }
 
 /* Footer */
 footer {
-    text-align: center;
+    background-color: #f4f4f4;
     padding: 20px;
-    background-color: #0538A9;
-    color: white;
+    text-align: center;
 }
 
-/* Mobile Styles */
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-icons a {
+    font-size: 1.5em;
+}
+
+footer .logo-footer img {
+    width: 80px;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .menu-toggle {
+    .hamburger {
         display: block;
+        cursor: pointer;
+        color: white;
     }
 
-    .nav-links {
+    .navigation-links {
+        display: none;
         position: fixed;
         top: 0;
-        right: 0;
-        background-color: #0538A9;
-        width: 250px;
+        left: 0;
+        width: 100%;
         height: 100%;
-        padding-top: 50px;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
+        background-color: #007BFF;
         flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        transition: transform 0.3s ease-in-out;
     }
 
-    .nav-links.active {
-        transform: translateX(0);
+    .navigation-links.open {
+        display: flex;
+        transform: translateY(0);
     }
 
-    .nav-links a {
+    .navigation-links a {
         color: white;
-        font-size: 1.2rem;
+        text-decoration: none;
         padding: 15px;
-        text-align: center;
-        border-bottom: 1px solid #f8a5c2;
+        font-size: 1.5em;
+        transition: background-color 0.3s ease;
     }
 
-    .nav-links a:hover {
-        background-color: #f8a5c2;
+    .navigation-links a:hover {
+        background-color: #0056b3;
     }
 
-    .menu-toggle:before {
-        content: '✕';
-        font-size: 2.5rem;
-        color: white;
+    .close-btn {
         position: absolute;
         top: 20px;
         right: 20px;
+        font-size: 30px;
+        color: white;
         cursor: pointer;
     }
 }
